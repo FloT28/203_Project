@@ -51,8 +51,8 @@ button:hover{
   border:black solid 7px;
   background-color: white;
   border-radius: 10px;
-margin-top:-22%;
-margin-left:25%;
+  margin-top:-22%;
+  margin-left:25%;
 }
 
 .Product_details2{
@@ -64,7 +64,36 @@ margin-left:25%;
   border-radius: 10px;
   margin-top:-22%;
   margin-left: 25%;
+}
 
+.images{
+    width:187px;
+    height:100px;
+    border: black solid 2px;
+    background-color: white;
+    border-radius:10px;
+    text-align:center;
+    margin-top:4%;
+}
+
+.h{ 
+    color:red;
+    text-align:right;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*row to store 3 columns inside*/
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
 }
 
 </style>
@@ -121,13 +150,11 @@ margin-left:25%;
     <h2 text-align="center">Product Details (1)</h2>
     <br>
     <h3>Product Title                  Product Color</h3>
-
     </div>
 
-    <div class="Checkout"
+    <div class="Checkout">
 
-    <!--Notification Settings Container-->
-    <!--Image 2-->
+        <!--Image 2-->
         <img src="https://i.postimg.cc/RCHL6N5r/shoe2.png" alt="image2" width="281" height="280">
         
     <div class="Product_details2">
@@ -136,6 +163,38 @@ margin-left:25%;
 
     </div>
 </div>
+<br>
+<br>
 
+    <!-- 3 images (advertisement) -->
+    <div class="row">
+  <div class="column">
+    <img src="https://i.postimg.cc/YCNVhGHF/shoe-1.png" alt="Shoe_1" style="width:100%">
+    <div class="images">
+        <h4>Men Cushion Outdoor Sport Shoes</h4>
+        <h5 class="h" text-align="left" color="red">NZD $24.26</h5>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="column">
+    <img src="https://i.postimg.cc/Gt1gLd5K/shoe-2.png" alt="Shoe_2" style="width:100%">
+        <div class="images">
+        <h4>Anti Slip Hiking Mesh Breathability </h4>
+        <h5 class="h" text-align="left" color="red">NZD $24.26</h5>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="column">
+    <img src="https://i.postimg.cc/KjqT95BT/shoe-3.png" alt="Shoe_3" style="width:100%">
+    <div class="images">
+        <h4> Womens Shoes </h4>
+        <h5 class="h" text-align="left" color="red">NZD $24.26</h5>
+    </div>
+  </div>
+</div>
 </body>
 </html>
