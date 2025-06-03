@@ -18,6 +18,7 @@ def layout():
 #Sign-in route page
 @app.route('/sign-in/',methods=('GET','POST'))
 def sign_in(): 
+    
     return render_template('sign-in2.html')
 
 #Sign-Up route page
