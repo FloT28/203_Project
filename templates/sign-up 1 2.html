@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-       <head>
-        <title>Sign in</title>
+    <head>
+        <title>Sign-up Page</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"></meta>
     </head>
 
     <style>
+
 button{
     border: none;
     cursor: pointer;
@@ -37,12 +38,13 @@ button:hover{
     background-color:#BAB6B6;
     border-radius: 10px;
     padding:70px;
+
 }
 
+    </style>
 
-</style>
 <body>
-
+    <!--Navigation bar (1)-->
 
   <!-- Button1 = Logo! -->
     <button type="Home" class="button butto1">
@@ -54,6 +56,8 @@ button:hover{
     <button type="Categories" class ="button button2">
         <img src="https://i.postimg.cc/n9HqxGgL/Categories-icon.png" alt="Categories-icon" width="100" height="70"/>
     </button>
+
+
 
     <!-- Input_type = Search bar! !not functionable!-->
     <img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>
@@ -76,45 +80,45 @@ button:hover{
         <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" alt="buttonpng" border="0" width="120" height="50" />
     </button>
 
-</div>
 
 
     <!--Line to seperate navigation bar-->
-    <hr width="100%" size="5" color="lightgray" >
-    
-    <!--Rectangle for outline for form -->
-    
-        <!--Form for sign-in-->  
+        <hr width="100%" size="10" background-color:black;>
+
+    <h1 text-align:center; ></h1>
+
+    <!--Form for sign-up inside Flexbox(rectangle)-->   
 <div class="form-container">
-
-        <h1 text-align: center;>Sign-in</h1>
+    <h1 text-align: center;>{% block title %} Sign-up {% endblock %}</h1>
     <form metod="post">
-        <!--Email label-->
-        <label for="email">Email:</label>
+        <!--Error message for not filling out all fields!-->
+        <label for="username">Username</label>
+        <br>
+        <input type="text" name=" username:" placeholder="Enter Username..." value="{{request.form['username']}}" size="30" required></input>
         <br>
         <br>
 
-        <!--Email input container-->
-        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" Font-weight:bold;></input>
+        <label for="Email">Email</label>
+        <br>
+
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email']}}" size="30" required></input>
         <br>
         <br>
 
-        <!--Password label-->
-        <label for="password">Password:</label>
+        <!--Add error message if not entered at least 8 characters*-->
+        <label for="password">Password</label>
         <br>
         <br>
 
-        <!--Password input container-->
-        <input type="password" name="password" placeholder="password" value="{{request.form['Password']}}" required ></input>
+        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" size="30" maxlength="8"  required></input>
         <br>
         <br>
-
-        <!--Password submit container-->
-        <input type="submit" value="Sign-in"></input>
-
+        <input type="submit" value="Sign-up" color="lightblue"></input>
     </form>
+
     <br>
-            <!--Flashing message-->        
+
+            <!--Flashing message for sign-in to account/ if user already has an account!-->        
               {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul>
@@ -124,10 +128,13 @@ button:hover{
                 </ul>
             {% endif %}
         {% endwith %}
-        
-<a href="{{url_for('sign_up')}}">Don't have an Account?<b> Sign-up</b></a>
+<a href=" {{url_for('sign_in')}}">Already have an Account?<b>Sign-in</b></a>
 
-</div>
+
+
+</div>    
+
+
 
     </body>
 
