@@ -28,6 +28,7 @@ database = {
 #Sign-in route page
 @app.route('/sign-in',methods=('GET','POST'))
 def sign_in(): 
+    #connecting with user input from (sign-in 1 1.html page)
     eml = request.form['Email']
     pwrd = request.form['Password']
     if pwrd not in database: 
@@ -58,13 +59,6 @@ def profile():
 @app.route('/Cart/')
 def cart(): 
     return render_template('Cart1.html')
-
-# Cart route page
-@app.route('/cart1')
-def cart1(): 
-    return render_template('test.html')
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
