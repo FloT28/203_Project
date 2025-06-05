@@ -254,7 +254,6 @@ button:hover{
         <img src="https://i.postimg.cc/hj5BtJPk/checkout2.png" width="55" height="55"  style="margin-left:83%; margin-top:-35%;">
 
         <br>
-        <br>
 
         <!--Content (Labels + User input [entries])-->
          <label align="center">Name on Card</label>
@@ -285,13 +284,17 @@ button:hover{
         <label align="center">Expiry Year</label>
         <br>
 
-        <!--Missing PART-->
-
-        <!--Enter CVV--> 
         <!-- Card Expiry Year(input container)-->
         <!--change to select tag-->
         <input type="number" name="exp_yr" placeholder="Enter expiry year..." value="{{request.form['exp_yr']}}" Font-weight:bold; min="1" max="2" required></input>
+        <br>
+        <br>
 
+        <!--CVV-->
+        <label align="center">CVV</label>
+        <br>
+
+        <input type="number" name="cvv" placeholder="Enter CVV" value="{{request.form['cvv']}}" Font-weight="bold"; maximum="2"required></input>
         <br>
         <br>
         <br>
