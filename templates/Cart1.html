@@ -45,7 +45,7 @@ button:hover{
 
 /*Notification Settings Box*/
 .Product_details{
-  width:630px;
+  width:620px;
   height:288px;
   text-align: center;
   border:black solid 7px;
@@ -56,7 +56,7 @@ button:hover{
 }
 
 .Product_details2{
-  width:630px;
+  width:620px;
   height:288px;
   text-align: center;
   border:black solid 7px;
@@ -96,20 +96,30 @@ button:hover{
   padding: 5px;
 }
 
-.payment{ 
-    height:628px;
-    width:489;
-    border-color: black solid 7px;
-    border-radius:10px;
-    margin-top:xxx;
-}
 
 .container1{ 
-  width:500;
-  height:500;
-  border-color:  black solid 7px; 
-  margin-bottom:50%;
-  margin-left:70%;
+  width:320px;
+  height:563px;
+  text-align: center;
+  border:black solid 7px;
+  background-color: white;
+  border-radius:10px;
+  margin-left:75%;
+  margin-top:-77%;
+}
+
+.button1{
+    background-color:white;
+    color:black;
+    border: 2px solid orange;
+    margin-left:10%;
+  font-size:medium;
+  font-weight: bold;
+}
+
+.button1:hover{
+    background-color: orange;
+    color:white;
 }
 
 </style>
@@ -182,54 +192,7 @@ button:hover{
 <br>
 <br>
 
-<!--Checkout Payment Method-->
-<div class="container1">
 
-  <!--first image (right corner)-->
-  <img src="https://i.postimg.cc/jSLyDmXB/checkout1.png">
-
-          <!--second image (left corner)-->
-        <img src="https://i.postimg.cc/hj5BtJPk/checkout2.png">
-
-        <!--Content (Heading)-->
-        <h2 text-align="center">Checkout Summary</h2>
-
-
-
-        <!--Content (Labels + User input [entries])-->
-         <label align="center">Name on Card</label>
-        <br>
-
-        <!-- Name on card (input container)-->
-        <input type="text" name="card_name" placeholder="Enter name..." value="{{request.form['card_name']}}" Font-weight:bold;></input>
-        <br>
-        <br>
-
-        <label align="center">Card Number</label>
-        <br>
-
-        <!-- Card number (input container)-->
-        <input type="text" name="card_number" placeholder="Enter Card No..." value="{{request.form['card_number']}}" Font-weight:bold;></input>
-        <br>
-        <br>
-
-        <label align="center">Expiry Month</label>
-        <br>
-
-        <!-- Card Expiry Month (input container)-->
-        <!--change to select tag-->
-        <input type="text" name="exp_mth" placeholder="Enter expiry month..." value="{{request.form['exp_mth']}}" Font-weight:bold;></input>
-        <br>
-        <br>
-
-        <label align="center">Expiry Year</label>
-        <br>
-
-        <!-- Card Expiry Year(input container)-->
-        <!--change to select tag-->
-        <input type="text" name="exp_yr" placeholder="Enter expiry year..." value="{{request.form['exp_yr']}}" Font-weight:bold;></input>
-
-      </div>
     <!-- 3 images (advertisement) -->
     <div class="row">
   <div class="column">
@@ -261,7 +224,58 @@ button:hover{
   </div>
 </div>
 
+<!--Checkout Payment Method-->
+<div class="container1">
 
+  <!--first image (right corner)-->
+  <img src="https://i.postimg.cc/jSLyDmXB/checkout1.png" width="100" height="100">
+
+          <!--second image (left corner)-->
+        <img src="https://i.postimg.cc/hj5BtJPk/checkout2.png" width="100" height="100">
+
+        <!--Content (Heading)-->
+        <h2 text-align="center">Checkout Summary</h2>
+
+        <!--Content (Labels + User input [entries])-->
+         <label align="center">Name on Card</label>
+        <br>
+
+        <!-- Name on card (input container)-->
+        <input type="text" name="card_name" placeholder="Enter name..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <br>
+        <br>
+
+        <label align="center">Card Number</label>
+        <br>
+
+        <!-- Card number (input container)-->
+        <input type="number" name="card_number" placeholder="Enter Card No..." value="{{request.form['card_number']}}" Font-weight:bold;  maximum="16" required></input>
+        <br>
+        <br>
+
+        <label align="center">Expiry Month</label>
+        <br>
+
+        <!-- Card Expiry Month (input container)-->
+        <!--change to select tag-->
+        <input type="number" name="exp_mth" placeholder="Enter expiry month..." value="{{request.form['exp_mth']}}" Font-weight:bold; maximum="2" required></input>
+        <br>
+        <br>
+
+        <label align="center">Expiry Year</label>
+        <br>
+
+        <!-- Card Expiry Year(input container)-->
+        <!--change to select tag-->
+        <input type="number" name="exp_yr" placeholder="Enter expiry year..." value="{{request.form['exp_yr']}}" Font-weight:bold; min="1" max="2" required></input>
+
+        <br>
+        <br>
+        <br>
+
+        <!--Checkout button-->
+        <button class="button1" type="submit" style="width: 200px; height: 50px;" on-click="Payment succesful!">Proceed Payment</button>
+      </div>
 
 </body>
 </html>
