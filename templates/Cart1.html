@@ -137,6 +137,21 @@ button:hover{
   margin-top:-22%;
   font-size:medium;
 }
+
+.h4{
+  display:flex;
+  font-size:medium;
+  margin-left:80%;
+  margin-top:-7%;
+}
+
+.h3{
+  display:flex;
+  font-size:27px;
+  margin-left:9%;
+  margin-top:-2%;
+}
+
 </style>
 
 
@@ -185,12 +200,18 @@ button:hover{
 <div class="Container">
     <!--(2) Container 1-->
     <!--Image 1-->
-    <img src="https://i.postimg.cc/qq4PvG8k/shoe1.png" alt="image1" width="260" height4="260">
+    <img src="https://i.postimg.cc/qq4PvG8k/shoe1.png" alt="image1" width="260" height="260">
 
     <div class="Product_details">
     <h2 text-align="center">Product Details (1)</h2>
+
+    <!--Line-->
+    <hr width="90%" size="10" color="grey";>
     <br>
-    <h3>Product Title                  Product Color</h3>
+
+    <h3 class="h3" style="font-weight: bold;">Product Title</h3>
+    <br>
+    <h4 class="h4">Product color</h4>
     </div>
 
     <div class="Checkout">
@@ -256,45 +277,45 @@ button:hover{
         <br>
 
         <!--Content (Labels + User input [entries])-->
-         <label align="center">Name on Card</label>
+         <label align="center" style="Font-weight:bold;">Name on Card</label>
         <br>
 
         <!-- Name on card (input container)-->
-        <input type="text" name="card_name" placeholder="Enter name..." value="{{request.form['card_name']}}" Font-weight:bold; required></input>
+        <input type="text" name="card_name" placeholder="Enter Full Name" value="{{request.form['card_name']}}" Font-weight:bold; required></input>
         <br>
         <br>
 
-        <label align="center">Card Number</label>
+        <label align="center" style="Font-weight:bold;">Card Number</label>
         <br>
 
         <!-- Card number (input container)-->
-        <input type="number" name="card_number" placeholder="Enter Card No..." value="{{request.form['card_number']}}" Font-weight:bold;  maximum="16" required></input>
+        <input class="input" type="number" name="card_number" placeholder="1111-2222-3333-4444" value="{{request.form['card_number']}}" Font-weight:bold;  maxlength="16" required></input>
         <br>
         <br>
 
-        <label align="center">Expiry Month</label>
+        <label align="center" style="Font-weight:bold;">Expiry Month</label>
         <br>
 
         <!-- Card Expiry Month (input container)-->
         <!--change to select tag-->
-        <input type="number" name="exp_mth" placeholder="Enter expiry month..." value="{{request.form['exp_mth']}}" Font-weight:bold; maximum="2" required></input>
+        <input class="input" type="number" name="exp_mth" placeholder="Enter expiry month..." value="{{request.form['exp_mth']}}" Font-weight:bold; maxlength="2" required></input>
         <br>
         <br>
 
-        <label align="center">Expiry Year</label>
+        <label align="center" style="Font-weight:bold;" >Expiry Year</label>
         <br>
 
         <!-- Card Expiry Year(input container)-->
         <!--change to select tag-->
-        <input type="number" name="exp_yr" placeholder="Enter expiry year..." value="{{request.form['exp_yr']}}" Font-weight:bold; min="1" max="2" required></input>
+        <input class="input" type="number" name="exp_yr" placeholder="Enter expiry year..." value="{{request.form['exp_yr']}}" Font-weight:bold; maxlength="2" required></input>
         <br>
         <br>
 
         <!--CVV-->
-        <label align="center">CVV</label>
+        <label align="center" style="Font-weight:bold;">CVV</label>
         <br>
 
-        <input type="number" name="cvv" placeholder="Enter CVV" value="{{request.form['cvv']}}" Font-weight="bold"; maximum="2"required></input>
+        <input class="input" type="number" name="cvv" placeholder="Enter CVV" value="{{request.form['cvv']}}" Font-weight="bold"; maxlength="2"required></input>
         <br>
         <br>
         <br>
