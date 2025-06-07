@@ -54,6 +54,13 @@ button:hover{
 
 }
 
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
 </style>
 <body>
@@ -110,7 +117,7 @@ button:hover{
         <h1 text-align: center;>Sign-in</h1>
     <form metod="post">
         <!--Email label-->
-        <label for="email">Email:</label>
+        <label for="email" style="Font-weight:bold;">Email:</label>
         <br>
         <br>
 
@@ -120,12 +127,12 @@ button:hover{
         <br>
 
         <!--Password label-->
-        <label for="password">Password:</label>
+        <label for="password" style="Font-weight:bold;">Password:</label>
         <br>
         <br>
 
         <!--Password input container-->
-        <input type="password" name="password" placeholder="password" value="{{request.form['Password']}}" maxlength="16" required ></input>
+        <input type="text" name="password" placeholder="password" value="{{request.form['Password']}}" maxlength="16" required ></input>
         <br>
         <br>
 
