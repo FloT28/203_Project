@@ -94,7 +94,7 @@ button:hover{
 
     
     <!--Line to seperate navigation bar-->
-    <hr width="100%" size="5" color="lightgray" >
+     <hr width="100%" size="5" color="lightgray" noshade="">
 
 
     <h1 text-align:center; ></h1>
@@ -106,14 +106,14 @@ button:hover{
         <!--Error message for not filling out all fields!-->
         <label for="username">Username</label>
         <br>
-        <input type="text" name=" username:" placeholder="Enter Username..." value="{{request.form['username']}}" size="30" required></input>
+        <input type="text" name=" username:" placeholder="Enter Username..." value="{{request.form['username']}}" maxlength="10" required></input>
         <br>
         <br>
 
         <label for="Email">Email</label>
         <br>
 
-        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email']}}" size="30" required></input>
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email']}}" required></input>
         <br>
         <br>
 
@@ -122,10 +122,10 @@ button:hover{
         <br>
         <br>
 
-        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" size="30" maxlength="8"  required></input>
+        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" maxlength="16"  required></input>
         <br>
         <br>
-        <button type="submit" value="Sign-up" class="button2">Submit</button>
+        <button type="submit" value="Sign-up" class="button2" onclick="alert('Details Saved! Welcome{username} to ShoezExpress')" >Submit</button>
     </form>
 
     <br>

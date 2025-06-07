@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-
+<!--To - do List-->
+<!--1. add message pop on submit - push to Github-->
     <style>
 button{
     border: none;
@@ -114,7 +115,7 @@ button:hover{
         <br>
 
         <!--Email input container-->
-        <input type="text" name="Email" placeholder="Enter Email..." value="{{request.form['Email']}}" Font-weight:bold;></input>
+        <input type="text" name="Email" placeholder="Enter Email..." value="{{request.form['Email']}}" Font-weight:bold; required></input>
         <br>
         <br>
 
@@ -124,12 +125,12 @@ button:hover{
         <br>
 
         <!--Password input container-->
-        <input type="password" name="password" placeholder="password" value="{{request.form['Password']}}" required ></input>
+        <input type="password" name="password" placeholder="password" value="{{request.form['Password']}}" maxlength="16" required ></input>
         <br>
         <br>
 
         <!--Password submit container-->
-        <button type="submit" value="Sign-in" class="button2">Submit</button>
+        <button type="submit" value="Sign-in" class="button2" onclick="alert(' Welcome back{username}')">Submit</button>
 
     </form>
     <br>
