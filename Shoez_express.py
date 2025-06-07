@@ -26,23 +26,23 @@ database = {
         }
 
 #Sign-in route page
-@app.route('/sign-in',methods=('GET','POST'))
+@app.route('/sign_in',methods=('GET','POST'))
 def sign_in(): 
     #connecting with user input from (sign-in 1 1.html page)
-    eml = request.form['Email']
-    pwrd = request.form['Password']
-    if pwrd not in database: 
-        return render_template('sign-in 1 1.html', message = 'invalid')
-    else: 
-        if database[eml] != pwrd:
-            return render_template('sign-in 1 1.html', message = "invalid password")
-        else: 
-            return render_template('sign-up 1 1.html')
+    #eml = request.form['Email']#error to fix 404 bad request! 
+    #pwrd = request.form['Password']
+    #if pwrd not in database: 
+     #   return render_template('sign-in 1 1.html', message = 'invalid')
+    #else: 
+     #   if database[eml] != pwrd:
+      #      return render_template('sign-in 1 1.html', message = "invalid password")
+       # else: 
+    return render_template('sign-in 1 1.html')
 
 #Sign-Up route page
-@app.route('/sign-up/', methods=('GET','POST'))
+@app.route('/sign_up/', methods=('GET','POST'))
 def sign_up():
-    return render_template('sign-up 1 1.html')
+    return render_template('sign-up 1_1.html')
 
 #Profile route page
 @app.route('/profile_1', methods=['GET','POST'])

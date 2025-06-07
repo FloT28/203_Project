@@ -26,6 +26,20 @@ button:hover{
     border-radius: 5%; 
             }
 
+/*button for submit*/
+.button2{
+    background-color:white;
+    color:black;
+    border: 2px solid orange;
+    margin-left:10%;
+    font-size:medium;
+    font-weight: bold;
+}
+
+.button2:hover{
+    background-color: orange;
+    color:white;
+}
             
 /*Form recangle or Flexbox*/
 .form-container{
@@ -53,11 +67,9 @@ button:hover{
 
 
     <!-- Button2 = Categories! -->
-    <button type="Categories" class ="button button2">
+    <button type="Categories" class ="button">
         <img src="https://i.postimg.cc/n9HqxGgL/Categories-icon.png" alt="Categories-icon" width="100" height="70"/>
     </button>
-
-
 
     <!-- Input_type = Search bar! !not functionable!-->
     <img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>
@@ -71,13 +83,13 @@ button:hover{
 
     <!-- Button5 = Sign-in/Sign-up -->
     <button type="Sign-in,Sign-up">
-        <img src="https://i.postimg.cc/hPnkswXC/sign-up-sign-in-icon.png" alt="buttonpng" border="0" width="120" height="50"/>
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
     </button>
 
 
     <!-- Button6 = Cart_page -->
     <button type="Cart_page">
-        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" alt="buttonpng" border="0" width="120" height="50" />
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="120" height="50" />
     </button>
 
     
@@ -113,7 +125,7 @@ button:hover{
         <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" size="30" maxlength="8"  required></input>
         <br>
         <br>
-        <input type="submit" value="Sign-up" color="lightblue"></input>
+        <button type="submit" value="Sign-up" class="button2">Submit</button>
     </form>
 
     <br>
