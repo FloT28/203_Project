@@ -104,13 +104,13 @@ button:hover{
     <h1 text-align: center;>{% block title %} Sign-up {% endblock %}</h1>
     <form metod="post">
         <!--Error message for not filling out all fields!-->
-        <label for="username" style="Font-weight:bold;">Username</label>
+        <label for="username">Username</label>
         <br>
         <input type="text" name=" username:" placeholder="Enter Username..." value="{{request.form['username']}}" maxlength="10" required></input>
         <br>
         <br>
 
-        <label for="Email" style="Font-weight:bold;">Email</label>
+        <label for="Email" >Email</label>
         <br>
 
         <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email']}}" required></input>
@@ -118,7 +118,7 @@ button:hover{
         <br>
 
         <!--Add error message if not entered at least 8 characters*-->
-        <label for="password" style="Font-weight:bold;">Password</label>
+        <label for="password" >Password</label>
         <br>
         <br>
 
@@ -126,7 +126,7 @@ button:hover{
         <br>
         <br>
 
-        <label for="confirm_password" style="font-weight: bold;">Confirm Password</label>
+        <label for="confirm_password" >Confirm Password</label>
         <br>
         <br>
 
@@ -134,7 +134,7 @@ button:hover{
         <br>
         <br>
 
-        <button type="submit" value="Sign-up" class="button2" onclick="alert('Details Saved! Welcome{username} to ShoezExpress')" >Submit</button>
+        <button type="submit" value="Sign-up" class="button2" onclick="window.location.href = '/profile_1' ; ">Submit</button>
     </form>
 
     <br>
