@@ -86,6 +86,7 @@ button:hover{
     color:black;
     border: 2px solid orange;
     margin-left:-9%;
+    font-weight:bold;
 }
 
 
@@ -169,7 +170,14 @@ button:hover{
     font-style: italic;
 }
 
-/*Container style for ()*/
+/*Input box size for user*/
+input[type=text] {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
 
 
 </style>
@@ -228,10 +236,10 @@ button:hover{
 
     <!--Form used to connect with (profile 3.html)-->
 <form action="{{ url_for('profile') }}" enctype="multipart/form-data" method="POST">
-    <input name="img" type="file"/> <!-- Choose File (button used as input)--> <input class="button1" type="submit"> <!--Submit button (to display image)-->
+    <input name="img" type="file"/> <!-- Choose File (button used as input)--> <button class="button1">Update</button> <!--Submit button (to display image)-->
 </form>
 
-    </div>
+</div>
 
     <!--Notification Settings Container-->
     <div class="Notification">
@@ -241,19 +249,19 @@ button:hover{
         </div>
         <!--Heading-->
         <h2 class="h2" text-align="center">Notification Settings</h2>
-        <br>
+        
         <h4>How would you like to receive shipping updates?</h4>
 
         <!--Email label and input container-->
         <label for="email">Email:</label>
-        <input type="" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" Font-weight:bold;></input>
         <br>
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" style="font-weight: bold;"></input>
         <br>
 
         <!--Mobile number label and input container-->
         <label for="mobile_no">Mobile Number:</label>
-        <input type="" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
         <br>
+        <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
         <br>
 
         <!--Horizontal line-->
@@ -284,26 +292,23 @@ button:hover{
         <div class="Account_details">
 
             <br>
-            <br>
-            <br>
-            <br> 
+
             <!--Username label and input container-->
             <label for="username">Username:</label>
-            <input type="" name="username" placeholder="Enter Username..." value="{{request.form['Username']}}" required  ></input>
+            <input type="text" name="username" placeholder="Enter Username..." value="{{request.form['Username']}}" required  ></input>
             <br>
-            <br>
-    
+
             <!--Email label and input container-->
             <label for="email">Email:</label>
-            <input type="" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}"></input>
-            <br>
+            <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" required></input>
             <br>
     
             <!--Mobile number label and input container-->
             <label for="mobile_no">Mobile Number:</label>
-            <input type="" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
-            <br>
-            <br>    
+            <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
+            <br> 
+
+            <button class="button button1" onclick = "alert('your details have been updated!')">Update Details</button>
             </div>
 
         <!--Container 2 - Account Settings-->
@@ -316,14 +321,16 @@ button:hover{
 
                 <div>
                     <label for="Delivery address">Delivery Address:</label>
-                    <input type="" name="delivery address" placeholder="Delivery address " value="{{request.form['Delivery address']}}"></input>
+                    <input type="text" name="delivery address" placeholder="Delivery address " value="{{request.form['Delivery address']}}"></input>
                 </div>
 
                 <br>
-                <br>
     
                 <label for="Date of Birth">Date of Birth: </label>
-                <input type="" name="Date of Birth" placeholder="Date of Birth " value="{{request.form['Date of Birth']}}"></input>
+                <input type="text" name="Date of Birth" placeholder="Date of Birth " value="{{request.form['Date of Birth']}}"></input>
+                <br>
+                <br> <!--Button to show display message only* -->
+                <button class="button button1" onclick="alert('Details Saved!')">Save</button>
             </div>
 
     </div>
