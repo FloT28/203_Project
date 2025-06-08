@@ -179,6 +179,12 @@ input[type=text] {
   border-radius: 3px;
 }
 
+ .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
 
 </style>
     
@@ -249,19 +255,21 @@ input[type=text] {
         </div>
         <!--Heading-->
         <h2 class="h2" text-align="center">Notification Settings</h2>
-        
+
         <h4>How would you like to receive shipping updates?</h4>
 
+        <!--Required-->
         <!--Email label and input container-->
         <label for="email">Email:</label>
         <br>
-        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" style="font-weight: bold;"></input>
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" style="font-weight: bold;" require pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></input>
         <br>
 
+        <!--Optional-->
         <!--Mobile number label and input container-->
         <label for="mobile_no">Mobile Number:</label>
         <br>
-        <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
+        <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile_number']}}"></input>
         <br>
 
         <!--Horizontal line-->
@@ -271,12 +279,12 @@ input[type=text] {
         <h4>Would you like to receive promotional products and deals?</h4>
         
         <!--Checkbox 1 * YES-->
-        <input type="checkbox" id="option1" name="Yes" value="Yes">
+        <input type="radio" id="option1" name="Yes" value="Yes">
         <label for="option1">Yes, I want to receive promotional products/deals!</label>
         <br>
 
         <!--Checkbox 2 * NO-->
-        <input type="checkbox" id="option2" name="No" value="No">
+        <input type="radio" id="option2" name="No" value="No">
         <label for="option2">No, I do not want to receive promotional products/deals</label>
         <br>
         <br> <!--Button to show display message only* -->

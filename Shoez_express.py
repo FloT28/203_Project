@@ -1,7 +1,6 @@
-from flask import Flask, render_template, redirect, url_for, request, flash, session
+from flask import Flask, render_template, redirect, url_for, request, flash
 from werkzeug.utils import secure_filename
 import os #libary used to import the Operating system - Upload image file for user
-from flask_session import Session #
 
 app = Flask(__name__)
 app.secret_key = "ShoezExpress"
@@ -42,18 +41,40 @@ def sign_in():
 #Sign-Up route page
 @app.route('/sign_up/', methods=('GET','POST'))
 def sign_up():
-    return render_template('sign-up 1_1.html')
+    #if request.method == 'POST': 
+     #   username = request.form['username']
+      #  email = request.form['email']
+       # password = request.form['password']
+
+    #if username not username: 
+     #   print("Username is required")
+    #elif not email: 
+     #   print("Email is required!")
+    #else: 
+        return render_template('sign-up 1_1.html')
 
 #Profile route page
 @app.route('/profile_1', methods=['GET','POST'])
 def profile(): 
+
+    #image profile management 
     if request.method == 'POST':
         file = request.files['img']#type of file requesting
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD'], filename))
         img = os.path.join(app.config['UPLOAD'], filename)
         return render_template('profile 3.html', img=img)#return to the original html page (profile)
+    
+    #Account_Settings check
+    Email = request.form['Email']#required
+
+    if not Email: 
+        flash('Email is required')
+    else: 
+        return redirect(url_for('/profile_1'))
     return render_template('profile 3.html')
+
+
 
 # Cart route page
 @app.route('/Cart/')
