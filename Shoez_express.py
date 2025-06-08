@@ -13,7 +13,7 @@ app.config['UPLOAD'] = upload_folder
 
 @app.route('/')
 def layout(): 
-    return render_template('Layout.html')
+    return render_template('home_page.html')
 
 #user1.html - new file to store and display user information
 
