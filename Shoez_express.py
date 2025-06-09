@@ -13,7 +13,7 @@ app.config['UPLOAD'] = upload_folder
 
 @app.route('/')
 def layout(): 
-    return render_template('home_page.html')
+    return render_template('home.html')#add home page once finished testing code!
 
 #user1.html - new file to store and display user information
 
@@ -64,15 +64,16 @@ def profile():
         file.save(os.path.join(app.config['UPLOAD'], filename))
         img = os.path.join(app.config['UPLOAD'], filename)
         return render_template('profile 3.html', img=img)#return to the original html page (profile)
-    
-    #Account_Settings check
-    Email = request.form['Email']#required
-
-    if not Email: 
-        flash('Email is required')
-    else: 
-        return redirect(url_for('/profile_1'))
     return render_template('profile 3.html')
+
+    #Account_Settings check
+    #Email = request.form['Email']#required
+
+    #if not Email: 
+     #   flash('Email is required')
+    #else: 
+     #   return redirect(url_for('/profile_1'))
+   # return render_template('profile_1.html')
 
 
 
