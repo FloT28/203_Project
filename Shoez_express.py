@@ -12,8 +12,8 @@ allowed_extensions = {'png','jpg','jpeg','gif'}
 app.config['UPLOAD'] = upload_folder
 
 @app.route('/')
-def layout(): 
-    return render_template('home.html')#add home page once finished testing code!
+def contact(): 
+    return render_template('contact_us.html')#add home page once finished testing code!
 
 #user1.html - new file to store and display user information
 
@@ -79,8 +79,12 @@ def profile():
 
 # Cart route page
 @app.route('/Cart/')
-def cart(): 
-    return render_template('Cart1.html')
+def Cart(): 
+    return render_template('Cart.html')
+
+@app.route('/Payment')
+def Payment(): 
+     return render_template('Payment.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
