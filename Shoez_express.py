@@ -1,15 +1,31 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 from werkzeug.utils import secure_filename
 import os #libary used to import the Operating system - Upload image file for user
+import psycopg2#database connection - postgreSQL 
 
 app = Flask(__name__)
 app.secret_key = "ShoezExpress"
 
+#used for the connecting of images uploaded by user for profile image function
 upload_folder = os.path.join('static', 'upload')
 allowed_extensions = {'png','jpg','jpeg','gif'}
 
 
 app.config['UPLOAD'] = upload_folder
+
+def db_connection(): 
+    conn = psycopg2.connect(host='localchost',
+                            databse='users',
+                            user=os.environ['DB_USERNAME'],
+                            password=os.environ['DB_PASSWORD'])
+    return conn
+
+# Connect to the database
+conn = psycopg2.connect(database="users", user="postgres",
+                        password="flowers7*", host="localhost", port="5432")
+
+# create a cursor
+cur = conn.cursor()
 
 @app.route('/')
 def contact(): 
@@ -39,19 +55,29 @@ def sign_in():
     return render_template('sign-in 1 1.html')
 
 #Sign-Up route page
-@app.route('/sign_up/', methods=('GET','POST'))
+@app.route('/sign_up', methods=['GET','POST'])
 def sign_up():
-    #if request.method == 'POST': 
-     #   username = request.form['username']
-      #  email = request.form['email']
-       # password = request.form['password']
+    if request.method == "POST": 
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
 
-    #if username not username: 
-     #   print("Username is required")
-    #elif not email: 
-     #   print("Email is required!")
-    #else: 
-        return render_template('sign-up 1_1.html')
+        if not username or not email or not password:
+            return "All fields are required", 400
+
+        #insert data into postgreSQL database
+        cur.execute('INSERT INTO users (username, email, password) ' 
+                    'VALUES(%s, %s, %s)',
+                    (username, email, password)
+        )
+            #commit changes
+        conn.commit()
+        return redirect(url_for('profile1', username=username))
+    
+    cur.execute("SELECT * FROM users")
+    print(cur.fetchall())
+
+    return render_template('sign-up 1_1.html')
 
 #Profile route page
 @app.route('/profile_1', methods=['GET','POST'])
@@ -66,15 +92,24 @@ def profile():
         return render_template('profile 3.html', img=img)#return to the original html page (profile)
     return render_template('profile 3.html')
 
-    #Account_Settings check
-    #Email = request.form['Email']#required
+#redirect user to profile page (newly created)
+@app.route('/profile1')
+def profile1(): 
+    #collect user input (username)
+    username = request.args.get('username')
+    #redirect user to original main profile page (have user links in a squared section)
+    return render_template('profile 3.html', username=username)
 
-    #if not Email: 
-     #   flash('Email is required')
-    #else: 
-     #   return redirect(url_for('/profile_1'))
-   # return render_template('profile_1.html')
+@app.route('/profile_settings')
+def profile_settings(): 
+    return render_template('profile_settings.html')
 
+@app.route('/Users')
+def Users():
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM users")
+    rows = cur.fetchall()
+    return render_template("Users.html", users=rows)
 
 
 # Cart route page

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+/*Navigation style for buttons*/
+button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    display:inline-block;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    font-size:16px;
+    margin-left: 45px;
+}
+
+/*Style for profile menu*/
+.block1{
+    width:1000px;
+    height:400px;
+    background-color:white;
+    padding: 20px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom:4px;
+    margin-left:5%;
+}
+
+/*table for users*/
+table, th, td {
+  border:1px solid black;
+}
+
+    </style>
+
+    <body style="background-color: #FBFaF4;"> 
+
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+    </button>
+
+
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
+    </button>
+    
+    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
+
+
+    <!-- SIGN-UP/SIGN IN --> 
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    </button>
+
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+    </button>
+
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+    
+    <br>
+    
+
+    <!--Line to seperate navigation bar-->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+
+    <div>
+        <div class="block1">
+        <h1 style="text-align: center; color: orange; font-weight: bold;">Users</h1>
+
+        <table style="width:100%">
+  <tr>
+    <th>Username</th>
+
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
+        <ul> 
+	        {% for user in users %} <!--user[1] (username)--> 
+                                    <!--user[2] (email) -->
+                                    <!--user[3] (password)-->
+	         <li> {{ user[0] }} - {{ user[1] }}</li>
+	        {% endfor %}
+        </ul>
+
+        
+        </div>
+
+
+    </div>
+
+    </body>
+</html>

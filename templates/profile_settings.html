@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+    <title>Profile Other Settings</title>
+
+</head>
+
+<style>
+
+
+/*Navigation style for buttons*/
+button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    display:inline-block;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    font-size:16px;
+    margin-left: 45px;
+}
+
+/*Product detail container*/
+.form-container{ 
+    width: 950px;
+    margin: 200px auto;
+    height:900px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-color: #D2D2D2;
+    padding: 20px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top:-4%;
+    margin-left:10%;
+}
+
+
+</style>
+
+    
+<body>
+    
+    <body style="background-color: #FBFaF4;"> 
+
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+    </button>
+
+
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
+    </button>
+    
+    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
+
+
+    <!-- SIGN-UP/SIGN IN --> 
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    </button>
+
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+    </button>
+
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+    
+    <br>
+    
+
+    <!--Line to seperate navigation bar-->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+    
+    <!--Notification Settings Container-->
+    <div class="form-container">
+        <!--Star icon-->
+        <div class="img1">
+            <img src="https://i.postimg.cc/3wMc39K6/star.png" width="85" height="85">  
+        </div>
+        <!--Heading-->
+        <h2 class="h2" text-align="center">Notification Settings</h2>
+
+        <h4>How would you like to receive shipping updates?</h4>
+
+        <!--Required-->
+        <!--Email label and input container-->
+        <label for="email">Email:</label>
+        <br>
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" style="font-weight: bold;" require pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></input>
+        <br>
+
+        <!--Optional-->
+        <!--Mobile number label and input container-->
+        <label for="mobile_no">Mobile Number:</label>
+        <br>
+        <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile_number']}}"></input>
+        <br>
+
+        <!--Horizontal line-->
+        <hr width="85%" size="6" color="lightgray">
+
+        <!--(2) Section inside same container-->
+        <h4>Would you like to receive promotional products and deals?</h4>
+        <p style="color:red; font-weight: bold;">Please, select one choice only!</p>
+        <!--Radio button * YES-->
+          <input type="radio" id="yes" name="option" value="YES">
+          <label for="Yes">Yes, I want to receive promotional products/deals!</label><br>
+
+        <!--Radio button *NO-->
+          <input type="radio" id="no" name="option" value="NO">
+          <label for="No">No, I do not want to receive promotional products/deals</label><br>
+        
+        <br> <!--Button to show display message only* -->
+        <button class="button button1" onclick="alert('Details Saved!')">Save</button>
+
+    </div>
+
+</div>
+
+    <!--Rectangle 3 (divided into 2 seperate containers or boxes for seperate settings)-->
+    <div class="Settings">
+        <!--Container 1 - Account Details-->
+        <div class="Account_details">
+
+            <br>
+
+            <!--Username label and input container-->
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter Username..." value="{{request.form['Username']}}" required  ></input>
+            <br>
+
+            <!--Email label and input container-->
+            <label for="email">Email:</label>
+            <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['Email']}}" required></input>
+            <br>
+    
+            <!--Mobile number label and input container-->
+            <label for="mobile_no">Mobile Number:</label>
+            <input type="text" name="mobile_no" placeholder="Enter Mobile number..." value="{{request.form['Mobile number']}}" required  ></input>
+            <br> 
+
+            <button class="button button1" onclick = "alert('your details have been updated!')">Update Details</button>
+            </div>
+
+        <!--Container 2 - Account Settings-->
+        <div class="Account_Settings">
+            <div class="img1">
+                <img src="https://i.postimg.cc/QdPHC9Pv/settings.png"  width="75" height="75">
+            </div>
+                <!--Account Settings-->
+                <h1 class="h2" text-align: center>Account Settings</h1>
+
+                <div>
+                    <label for="Delivery address">Delivery Address:</label>
+                    <input type="text" name="delivery address" placeholder="Delivery address " value="{{request.form['Delivery address']}}"></input>
+                </div>
+
+                <br>
+    
+                <label for="Date of Birth">Date of Birth: </label>
+                <input type="text" name="Date of Birth" placeholder="Date of Birth " value="{{request.form['Date of Birth']}}"></input>
+                <br>
+                <br> <!--Button to show display message only* -->
+                <button class="button button1" onclick="alert('Details Saved!')">Save</button>
+            </div>
+
+
+</body>
+</html>
