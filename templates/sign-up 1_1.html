@@ -102,18 +102,18 @@ button:hover{
     <!--Form for sign-up inside Flexbox(rectangle)-->   
 <div class="form-container">
     <h1 text-align: center;>{% block title %} Sign-up {% endblock %}</h1>
-    <form metod="post">
+    <form action="/sign_up" method="post">
         <!--Error message for not filling out all fields!-->
         <label for="username">Username</label>
         <br>
-        <input type="text" name=" username:" placeholder="Enter Username..." value="{{request.form['username']}}" maxlength="10" required></input>
+        <input type="text" name="username" placeholder="Enter Username..." value="{{request.form['username','']}}"  maxlength="10" required></input>
         <br>
         <br>
 
-        <label for="Email" >Email</label>
+        <label for="email" >Email</label>
         <br>
 
-        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email']}}" required></input>
+        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email','']}}" required></input>
         <br>
         <br>
 
@@ -122,19 +122,12 @@ button:hover{
         <br>
         <br>
 
-        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" maxlength="16"  required></input>
+        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password','']}}" maxlength="16"  required></input>
         <br>
         <br>
 
-        <label for="confirm_password" >Confirm Password</label>
-        <br>
-        <br>
 
-        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password']}}" maxlength="16"  required></input>
-        <br>
-        <br>
-
-        <button type="submit" value="Sign-up" class="button2" onclick="window.location.href = '/profile_1' ; ">Submit</button>
+        <button type="submit" value="Sign-up" class="button2">Submit</button>
     </form>
 
     <br>
