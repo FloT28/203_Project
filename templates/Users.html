@@ -34,6 +34,8 @@ button{
 /*table for users*/
 table, th, td {
   border:1px solid black;
+  width:50px;
+  height:50px;
 }
 
     </style>
@@ -84,32 +86,22 @@ table, th, td {
         <table style="width:100%">
   <tr>
     <th>Username</th>
-
+    <th>Email</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-        <ul> 
-	        {% for user in users %} <!--user[1] (username)--> 
-                                    <!--user[2] (email) -->
-                                    <!--user[3] (password)-->
+    <td>    <!--Username-->
+            {% for user in users %} <!--user[1] (username)--> 
 	         <li> {{ user[0] }} - {{ user[1] }}</li>
 	        {% endfor %}
-        </ul>
-
-        
+        </td>
+    <td>    <!--Email-->
+            {% for user in users %} <!--user[2] (email) -->
+	         <li> {{ user[0] }} - {{ user[2] }}</li>
+	        {% endfor %}
+    </td>
+  </tr>
+</table>
         </div>
-
-
     </div>
 
     </body>

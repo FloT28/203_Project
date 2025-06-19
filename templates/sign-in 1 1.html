@@ -63,49 +63,59 @@ input[type=text] {
   border-radius: 3px;
 }
 
+/*Search Style*/
+input[type="search"]{
+    background-color:lightgray;
+    width:265px;
+    height:45px;
+    border-radius:25px;
+    margin-top: 2%;
+    padding: 6px;
+
+}
+
 </style>
 <body style="background-color: #FBFaF4;"> 
 
-
-  <!-- Button1 = Logo! -->
-    <button type="Home" class="button">
-        <img src="https://i.postimg.cc/YCxzshhT/Logo.pngs" alt="Home" border="0" width="190" height="50"/>
+    <!--Background color for Page-->
+    <body style="background-color: #FBFaF4;">
+ 
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
     </button>
-
-
-    <!-- Button2 = Categories! -->
-    <button type="Categories" class ="button">
-        <img src="https://i.postimg.cc/n9HqxGgL/Categories-icon.png" alt="Categories-icon" width="100" height="70"/>
+ 
+ 
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
     </button>
-
-    <!-- Input_type = Search bar! !not functionable!-->
-    <img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>
-
-
-    <!-- Button4 = Currency -->
-    <button type="Currency">
-        <img src="https://i.postimg.cc/1XCqHrbR/currency.png" alt="currenc" border="0" width="100" height="50"/>
-    </button>
-
-
-    <!-- Button5 = Sign-in/Sign-up -->
+   
+    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
+ 
+ 
+    <!-- SIGN-UP/SIGN IN -->
     <button type="Sign-in,Sign-up">
         <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
     </button>
-
-
-    <!-- Button6 = Cart_page -->
-    <button type="Cart_page">
-        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="120" height="50" />
+ 
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
     </button>
-
-</div>
-
-
+ 
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+   
+     
     <!--Line to seperate navigation bar-->
-    <hr width="100%" size="10" color="lightgray";>
-
-    <!--Button3 = Search bar! -->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+ 
+</div>
 
 
     <h1 text-align:center; ></h1>
@@ -116,6 +126,7 @@ input[type=text] {
 <div class="form-container">
 
         <h1 text-align: center;>Sign-in</h1>
+        <h3 style="text-align: center; color: orange;">Welcome back!</h3>
     <form metod="post">
         <!--Email label-->
         <label for="email" style="Font-weight:bold;">Email:</label>
@@ -135,10 +146,9 @@ input[type=text] {
         <!--Password input container-->
         <input type="text" name="password" placeholder="password" value="{{request.form['Password']}}" maxlength="16" required ></input>
         <br>
-        <br>
-
+ 
         <!--Password submit container-->
-        <button type="submit" value="Sign-in" class="button2" onclick="alert(' Welcome back{username}')">Submit</button>
+        <button type="submit" value="Sign-in" class="button2">Submit</button>
 
     </form>
     <br>
