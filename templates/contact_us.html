@@ -125,44 +125,44 @@ form {
 }
 
 </style>
-
-    <body style="background-color: #FBFaF4;"> 
-
+    <!--Background color for Page-->
+    <body style="background-color: #FBFaF4;">
+ 
     <!--HOME PAGE-->
     <button type="Home">
         <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
     </button>
-
-
+ 
+ 
     <!--SEARCH BAR-->
     <input type="search" placeholder="Search">
     <button>
         <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
     </button>
-    
+   
     <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
-
-
-    <!-- SIGN-UP/SIGN IN --> 
+ 
+ 
+    <!-- SIGN-UP/SIGN IN -->
     <button type="Sign-in,Sign-up">
         <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
     </button>
-
+ 
     <!--CONTACT PAGE-->
     <button type="contact us" >
         <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
     </button>
-
+ 
     <!-- CART PAGE -->
     <button type="Cart_page">
         <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
     </button>
-    
-    <br>
-    
-
+   
+     
     <!--Line to seperate navigation bar-->
     <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+ 
     <br>
     <br>
     <br>
@@ -173,33 +173,37 @@ form {
     <br>
     <!--Form Container-->
     <div class="form-container">
-    <form action="success_form.html" method="POST"></form>
-        <!--Line break-->    
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--USER-INPUT (NAME)-->
-        <h3 style="text-align:center; border:solid black 2px;" for="name">Name</h3>
-        <input type="name" id="name" name="name" required>
+        <form action="/contact_us" method="post">
+            <!--Line break-->    
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        
+            <!--USER-INPUT (NAME)-->
+            <h3 style="text-align:center; border:solid black 2px;" for="name">Name *</h3>
+            <input type="name" id="name" name="name" value="{{request.form['name','']}}" required >
 
-        <br>
-        <br>
-        <!--USER-INPUT (EMAIL)-->
-        <h3 style="text-align:center; border:solid black 2px;" for="email">Email</h3>
-        <input type="email" id="email" name="email" required>
+            <br>
+            <br>
             
-        <!--USER-INPUT (MESSAGE)-->
-        <h3 style="text-align:center; border:solid black 2px;" for="message">Message</h3>
-            <textarea cols="62" required>
-                Leave us a message
-            </textarea> 
-        <br>
-        <br>
+            <!--USER-INPUT (EMAIL)-->
+            <h3 style="text-align:center; border:solid black 2px;" for="email">Email</h3>
+            <input type="email" id="email" name="email" value="{{request.form['email','']}}" required>
+            
+            <!--USER-INPUT (MESSAGE)-->
+            <h3 style="text-align:center; border:solid black 2px;" for="message" name="message">Message</h3>
+                <textarea cols="62" value="{{request.form['message','']}}" required>
+                    Leave us a message
+                </textarea> 
+            <br>
+            <br>
+            
             <!--BUTTON (SUBMIT FORM)--> <!--show pop-up message-->
-            <input type="submit" value="Submit" name="Submit" onclick="">
+            <input type="submit" value="Submit" name="Submit">
+            <h2>Hi2</h2>
         </form>
 
     </div>
