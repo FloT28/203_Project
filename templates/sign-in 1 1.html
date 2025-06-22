@@ -61,8 +61,15 @@ input[type=text] {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 3px;
-}
 
+  
+}
+   &:focus {
+        & + label {
+          opacity: 0;
+        }
+    }
+    
 /*Search Style*/
 input[type="search"]{
     background-color:lightgray;
@@ -127,29 +134,30 @@ input[type="search"]{
 
         <h1 text-align: center;>Sign-in</h1>
         <h3 style="text-align: center; color: orange;">Welcome back!</h3>
-    <form metod="post">
+    <form action="/sign_in" method="post">
         <!--Email label-->
-        <label for="email" style="Font-weight:bold;">Email:</label>
+        <label for="username" style="Font-weight:bold;">Username:</label>
         <br>
         <br>
 
         <!--Email input container-->
-        <input type="text" name="Email" placeholder="Enter Email..." value="{{request.form['Email']}}" Font-weight:bold; required></input>
+        <input type=" " name="username" placeholder="Enter username..." value="{{request.form['username','']}}" Font-weight:bold; required></input>
         <br>
         <br>
+        <div id="uname_response" ></div>
 
         <!--Password label-->
         <label for="password" style="Font-weight:bold;">Password:</label>
         <br>
-        <br>
+
 
         <!--Password input container-->
-        <input type="text" name="password" placeholder="password" value="{{request.form['Password']}}" maxlength="16" required ></input>
+        <input type="password" name="password" placeholder="password" value="{{request.form['password','']}}" maxlength="16" required ></input>
         <br>
- 
+        <br>
+
         <!--Password submit container-->
         <button type="submit" value="Sign-in" class="button2">Submit</button>
-
     </form>
     <br>
             <!--Flashing message-->        

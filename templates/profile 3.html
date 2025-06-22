@@ -219,7 +219,7 @@ input[type=text] {
         <br>
         <br>
         <h3 style="text-align:center; color:orangered">1. Profile Picture → </h3>
-        <h3 style="text-align:center; color:orangered">2. Account Settings</h3>
+        <h3 style="text-align:center; color:orangered">2. Account Settings & Account Details</h3>
         <!--Flashing message for (redirect user to profile_settings) user to profile settings page-->
 {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -231,19 +231,6 @@ input[type=text] {
             {% endif %}
         {% endwith %}
 <a href=" {{url_for('profile_settings')}}"style="text-align: center;"><b>Click Here!</b></a>
-
-        <h3 style="text-align:center; color:orangered">2. Account Details</h3>
-{% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul>
-                    {% for message in messages %}
-                    <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
-<a href=" {{url_for('profile_settings')}}"style="text-align: center;"><b>Click Here!</b></a>
-
 
     </div>
 
@@ -271,6 +258,7 @@ input[type=text] {
 <form action="{{ url_for('profile') }}" enctype="multipart/form-data" method="POST">
     <input name="img" type="file"/> <!-- Choose File (button used as input)--> <button class="button1">Update</button> <!--Submit button (to display image)-->
 </form>
+
 
 </div>
     </div>

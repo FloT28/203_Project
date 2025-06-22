@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Confirmation message</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0" ></meta>
+
+    </head>
+
+    <style>
+
+/*(all) navigation buttons style1*/
+button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    display:inline-flex;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    margin-left: 50px;
+}
+
+/*table for confirmation message*/
+table, th, td {
+  border:1px solid black;
+
+}
+
+/*Search Bar*/
+input[type="search"]{
+    background-color:lightgray;
+    width:265px;
+    height:45px;
+    border-radius:25px;
+    margin-top: 2%;
+    padding: 6px;
+}
+
+</style>
+
+    <!--Background color for Page-->
+    <body style="background-color: #FBFaF4;">
+ 
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+    </button>
+ 
+ 
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
+    </button> 
+ 
+    <!-- SIGN-UP/SIGN IN -->
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    </button>
+ 
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+    </button>
+ 
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+   
+     
+    <!--Line to seperate navigation bar-->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+
+    <h1 style="text-align:center; color: orange;">Message Confirmation</h1>
+
+      <table style="width:100%">
+  <tr>
+    <th>Name</th>
+  </tr>
+  <tr>
+        <td>    <!--Name and Email-->
+            {% for contact in contact %} 
+	         <li> {{ contact[0] }}</li>
+	        {% endfor %}
+        </td>
+        <br>
+        <tr>
+            <th>Email</th>
+        </tr>
+        <td>
+            <!--Email-->
+            {% for contact in contact %}
+            <li> {{ contact[1]}}</li>
+            {% endfor %}
+        </td>
+  </tr>
+</table>
+        </div>
+    </div>
+    
+    </body>
+</html>
+        

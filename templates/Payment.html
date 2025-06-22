@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Payment</title>
+        <title>Payment</title><!--Title of HTML Page-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head> 
     <style>
@@ -19,7 +19,7 @@ button{
     margin-left: 45px;
     }
 
-
+/*Search Bar style*/
 input[type="search"]{
     background-color:lightgray;
     width:265px;
@@ -44,6 +44,7 @@ input[type="search"]{
     margin-top:4%;
 }
 
+/*Payment method container*/
 .block{
     width:500px;
     height:530px;
@@ -53,6 +54,7 @@ input[type="search"]{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+/*Pay now button style*/
 input[type="pay"]{
     width:96%;
     padding: 10px;
@@ -66,6 +68,7 @@ input[type="pay"]{
     transition: background-color 0.3s ease;
 }
 
+/*Pay now button style*/
 input[type="pay"]:hover{
     background-color: orange;
     color:white;
@@ -78,6 +81,7 @@ input[type="pay"]{
     font-weight:bold;
 }
 
+/*User input*/
 input[type="payment"]{
     width:100%;
     padding: 10px;
@@ -91,6 +95,12 @@ input[type="payment"]{
     </style>
         
     <body>
+        <script>
+  function clickAlert() {
+    alert("Payment Succesfully made!");
+    }
+        </script>
+
  <!--HOME PAGE-->
     <button type="Home">
         <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
@@ -129,7 +139,8 @@ input[type="payment"]{
     <br>
     <div class="Payment">
         <div class="block">
-        
+        <form action="/Payment" method="POST">
+
         <h1 style="text-align: center;">Payment Details</h1>
         <!--<img src="https://i.postimg.cc/6QZsdR8P/payment-cards.png"-->
 
@@ -172,11 +183,12 @@ input[type="payment"]{
         <label align="center" style="Font-weight:bold;">CVV</label>
         <br>
 
-        <input type="payment" type="number" name="cvv" placeholder="Enter CVV" value="{{request.form['cvv']}}" Font-weight="bold"; maxlength="2"required></input>
+        <input type="payment" type="number" name="cvv" placeholder="Enter CVV" value="{{request.form['cvv']}}" Font-weight="bold"; maxlength="3" required></input>
         <br>
         </div>
         <br>
-        <input type="pay" value="Pay Now" name="Payment" onclick="window.location.href = '/Payment' ; ">
+        <input type="pay" value="Pay Now" name="Payment" onclick="clickAlert()" value="Click-2-Alert">
+    </form>
     </div>
 
 </body>

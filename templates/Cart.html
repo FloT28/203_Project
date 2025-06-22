@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<!-- saved from url=(0027)http://127.0.0.1:5000/Cart/ -->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head> 
+    </head>
     <style>
        
     /*(all) navigation buttons style1*/
@@ -19,9 +17,9 @@ button{
     cursor:pointer;
     margin-left: 45px;
     }
-
+ 
 /*Product detail container*/
-.form-container{ 
+.form-container{
     width: 950px;
     margin: 200px auto;
     height:900px;
@@ -30,11 +28,11 @@ button{
     background-color: #D2D2D2;
     padding: 20px;
     border-radius:8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top:-4%;
     margin-left:10%;
 }
-
+ 
 /*Cart section blocks*/
 .block{
     width:899px;
@@ -42,10 +40,10 @@ button{
     background-color: white;
     padding:20px;
     border-radius:8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
+ 
+ 
 /*Search Bar*/
 input[type="search"]{
     background-color:lightgray;
@@ -54,11 +52,9 @@ input[type="search"]{
     border-radius:25px;
     margin-top: 2%;
     padding: 6px;
-
 }
-
-
-
+ 
+/*Style = Submit button for*/
 input[type="submit"]{
     width:99%;
     padding: 10px;
@@ -70,59 +66,127 @@ input[type="submit"]{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+ 
+/*Hover style - appearance of submit button*/
 input[type="submit"]:hover{
     background-color: orange;
     color:white;
 }
-
+ 
+/*Submit button * before hover*/
 input[type="submit"]{
     background-color:white;
     color:black;
     font-weight:bold;
 }
-    </style>
-    <body>
-        <body style="background-color: #FBFaF4;"> 
+ 
+/*Reccomendation block*/
+.block1{
+    width:1100px;
+    height:400px;
+    background-image:url('https://i.postimg.cc/pV8YgjS9/Recommendations.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    padding:20px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left:2%;
+    margin-top:-10%;
+}
+ 
+ 
+/*Responsive Image Gallery*/
+div.gallery{
+    border:1px solid #ccc;
+}
+ 
+/*Reccomendation gallery style*/
+div.gallery:hover{
+    border: 1px solid #777;
+}
 
+
+/*Reccomendation gallery style*/
+div.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*Reccomendation gallery style*/
+div.desc{
+    padding: 15px;
+    text-align: center;
+}
+ 
+/*Reccomendation gallery style*/
+*{
+    box-sizing: border-box;
+}
+
+/*Reccomendation gallery style*/
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+/*Reccomendation gallery sizing*/
+@media only screen and (max-width: 700px){
+    .responsive{
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+/*Reccomendation gallery sizing*/
+@media only screen and (max-width: 500px){
+    .responsive{
+        width:100%;
+    }
+}
+ 
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+    <body>
+        <!--Background color of entire page-->
+        <body style="background-color: #FBFaF4;">
+ 
     <!--HOME PAGE-->
     <button type="Home">
         <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
     </button>
-
-
-    <!-- CATEGORIES PAGE -->
-    <button type="Categories">
-        <img src="https://i.postimg.cc/n9HqxGgL/Categories-icon.png" alt="Categories-icon" width="100" height="70"/>
-    </button>
-
-
+ 
+ 
     <!--SEARCH BAR-->
     <input type="search" placeholder="Search">
     <button>
         <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
     </button>
-    
-    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
-
-
-    <!-- SIGN-UP/SIGN IN --> 
+ 
+ 
+    <!-- SIGN-UP/SIGN IN -->
     <button type="Sign-in,Sign-up">
         <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png"  onclick="window.location.href = '/sign_up'" alt="buttonpng" border="0" width="120" height="50"/>
     </button>
-
+ 
     <!--CONTACT PAGE-->
     <button type="contact us" >
-        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/contact_us'" width="100" height="70">
     </button>
-
+ 
     <!-- CART PAGE -->
     <button type="Cart_page">
         <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
     </button>
-    
+   
     <br>
-    
+   
     <!--Line to seperate navigation bar-->
     <hr width="100%" size="5" color="lightgray" noshade="">
     <br>
@@ -133,13 +197,14 @@ input[type="submit"]{
     <br>
     <br>
     <h1></h1>
-
+ 
     <div class="form-container">
         <h1>CART</h1>
         <br>
         <div class="block">
-                    <h2>Product Name</h2>
-            </div>
+            <img src="https://i.postimg.cc/qq4PvG8k/shoe1.png" alt="image1" width="210" height="210">
+            <h2>Product Name</h2>    
+        </div>
         <br>
         <br>
         <br>
@@ -151,5 +216,54 @@ input[type="submit"]{
         <br>
             <input type="submit" value="Continue to Pay" name="Payment" onclick="window.location.href = '/Payment' ; ">
     </div>
+ 
+    <!--Reccomendation Section-->
+    <div class="block1">
+        <br>
+        <br>
+        <br>
+       <div class="responsive">
+        <!--Gallery 1 (Men Sport Shoes)-->
+  <div class="gallery">
+    <a target="_blank" href="https://i.postimg.cc/wTs46gRT/reco-1.jpg"><!--Image link-->
+      <img src="https://i.postimg.cc/wTs46gRT/reco-1.jpg" alt="Mens_Sport_Shoes" width="600" height="400">
+    </a>
+    <div class="desc" style="text-align:center; font-weight: bold;">Men Sport Shoes</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i.postimg.cc/Dz7xdGj8/reco-2.jpg">
+      <img src="https://i.postimg.cc/Dz7xdGj8/reco-2.jpg" alt="Men_Active_Shoes" width="600" height="400">
+    </a>
+    <div class="desc" style="text-align:center; font-weight: bold;">Men Active Shoes</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i.postimg.cc/q759qF2M/women-sport-shoes.png">
+      <img src="https://i.postimg.cc/q759qF2M/women-sport-shoes.png" alt="Women_light_active_shoes" width="600" height="400">
+    </a>
+    <div class="desc" style="text-align:center; font-weight: bold;">Women light Active Shoes</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i.postimg.cc/HnBKGPWg/women-shoes1.png">
+      <img src="https://i.postimg.cc/HnBKGPWg/women-shoes1.png" alt="Women_Sport_Shoes" width="600px" height="400px">
+    </a>
+    <div class="desc" style="text-align:center; font-weight: bold;">Women Sport Shoes</div>
+  </div>
+</div>
+
+        <!--<img src="https://i.postimg.cc/wTs46gRT/reco-1.jpg" width="" height=""-->
+        <!--<img src="https://i.postimg.cc/Dz7xdGj8/reco-2.jpg" width="" height=""-->
+        <!--<img src="https://i.postimg.cc/9f1JxfK1/reco-3.jpg" width="" height=""-->
+    </div>
+ 
 </body>
 </html>
