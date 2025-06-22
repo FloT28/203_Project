@@ -49,7 +49,7 @@ button{
 }
  
 /*Notification Settings (Container)*/
-.block2{
+.notification_sett{
     width:410px;
     height:480px;
     background-color:white;
@@ -60,14 +60,14 @@ button{
 }
  
 /*Account Settings (container)*/
-.block3{
+.account_sett{
     width:410px;
-    height:410px;
+    height:460px;
     background-color:white;
     padding: 20px;
     border-radius:8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top:-50%;
+    margin-top:-52%;
 }
  
 /*Heading - Account / Notification Heading*/
@@ -95,7 +95,7 @@ input[type=text] {
   margin-left:25%;
 }
  
-/*Label Heading (center)*/
+/*Label Heading *Delivery address (center)*/
 .center{
     margin-left:23%;
     width: 50%;
@@ -103,7 +103,16 @@ input[type=text] {
     font-weight: bold;
 }
  
- /*button for submit*/
+/*Label Heading *username (center)*/
+.center1{
+    margin-left:23%;
+    margin-top:10%;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/*Button Style - Submit*/
 .button2{
     background-color:white;
     color:black;
@@ -113,6 +122,7 @@ input[type=text] {
   font-weight: bold;
 }
 
+/*Button Style - Submit*/
 .button2:hover{
     background-color: orange;
     color:white;
@@ -168,7 +178,7 @@ input[type=text] {
     <!--Notification Settings Container-->
     <div class="form-container">
         <div class="block1">
-            <div class="block2">
+            <div class="notification_sett">
                 <img src="https://i.postimg.cc/3wMc39K6/star.png" width="85" height="85">  
                 <h2 class="h2" style="text-align:center;">Notification Settings</h2>
  
@@ -201,15 +211,14 @@ input[type=text] {
         <!--Radio button *NO-->
           <input type="radio" id="no" name="option" value="NO">
           <label for="No">No, I do not want to receive promotional products/deals</label><br>
-        
-        <br>
 
+        <!--Submit button-->
         <button type="submit" value="Sign-in" class="button2" onclick="alert('Future Implementation!')">Submit</button>
 
             </div>
-            <div class="block3">
+            <div class="account_sett">
                 <img src="https://i.postimg.cc/QdPHC9Pv/settings.png"  width="75" height="75">
-                 
+            <form>
                 <!--Account Settings-->
                 <h1 class="h2" text-align: center>Account Settings</h1>
  
@@ -218,13 +227,30 @@ input[type=text] {
                     <input type="text" name="delivery address" placeholder="Delivery address " value="{{request.form['Delivery address']}}"></input>
                 </div>
                 <br>
-                <br>
-                <br>
-   
+                
+                <!--Editable Date of birth-->
                 <label class="center" for="Date of Birth">Date of Birth: </label>
                 <input type="date" name="date"/>
+                <br> <!--Space between labels and user input-->
                 <br>
+                <br>
+
+                <!--Username-->
+                <div>
+                    <label class="center1" for="Username">Username:</label>
+                    <input type="text" name="username" placeholder="Username... " value="{{request.form['Username','']}}"></input>
+                </div>
+                
+                <!--Email-->
+                <br>
+                <div>
+                    <label class="center1" for="Email">Email</label>
+                    <input type="text" name="email" placeholder="Email... " value="{{request.form['Email','']}}"></input>
+                </div>
+                <button type="submit" value="Sign-in" class="button2" onclick="alert('Future Implementation!')">Submit</button>
+            </form>
             </div>
+
         </div>
     </div>
  
