@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, flash
+from flask import Flask, render_template, redirect, url_for, request, flash, session
 from werkzeug.utils import secure_filename
 import os #libary used to import the Operating system - Upload image file for user
 import psycopg2#database connection - postgreSQL 
@@ -156,10 +156,23 @@ def Users():
 #Sign-in route page
 @app.route('/sign_in',methods=['GET','POST'])
 def sign_in(): 
-    email = request.form.get('email')
-    password = request.form.get('password')
+    #User input collection for username and password
+    if request.method == 'POST': 
+        username = request.form['username']
+        password = request.form['password']
+        #Implement actual authentication logic here 
+        session['logged_in'] = True 
+        session['username'] = username 
+        return redirect(url_for('profile'))
 
     return render_template('sign-in 1 1.html')
+
+@app.route('/sign-out')
+def logout(): 
+    session.pop('logged_in', None)
+    session.pop('username', None)
+    return redirect(url_for('sign_in'))
+
 
 #Profile route page
 @app.route('/profile_1', methods=['GET','POST'])
