@@ -82,7 +82,7 @@ def db():
 #home page
 @app.route('/')
 def layout(): 
-    return render_template('layout.html')
+    return render_template('products.html')
 
 #contact page
 @app.route('/contact_us', methods=['GET','POST'])
@@ -210,8 +210,12 @@ def cart():
 #Payment page
 @app.route('/Payment')
 def Payment(): 
-     return render_template('Payment.html')
+    return render_template('Payment.html')
 
+#Products Page 
+@app.route('/products')
+def products(): 
+    return render_template('products.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Product Page</title>
+        <!--Connection with css file-->
+        <link rel="stylesheet" href="Navigation.css">
+    </head>
+<style> 
+
+/*Navigation bar icons*/
+button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    display:inline-block;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    margin-left: 45px;
+}
+
+/*Body Background for all images*/
+body{
+    background-color:"#FBFaF4;";
+}
+
+/*Card main style*/
+.card{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:200px;
+    height:100px;
+    margin: flex; 
+    border:black solid 2px;
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Card Button*/
+.card_button{ 
+    border: none;
+    outline:0;
+    padding: 12px; 
+    color: black; 
+    background-color:white;
+    border:2px solid orange;
+    text-align: center; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size:medium;
+    font-weight: bold;
+    margin-left:3%;
+}
+
+.card_button:hover{ 
+    background-color: orange;
+    color:white;
+}
+
+/*Card main style*/
+.card2{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:200px;
+    height:100px;
+    margin: flex; 
+    border:black solid 2px;
+    text-align: center; 
+    font-family: arial;
+    margin-left:10px;
+}
+
+/*Card Button*/
+.card_button2{ 
+    border: none;
+    outline:0;
+    padding: 12px; 
+    color: black; 
+    background-color:white;
+    border:2px solid orange;
+    text-align: center; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size:medium;
+    font-weight: bold;
+    text-align:center;
+    margin-left:120%;
+    margin-top:-19%;
+}
+
+.text{ 
+    margin-left:120%;
+}
+
+.card_button2:hover{ 
+    background-color: orange;
+    color:white;
+}
+
+/*Product Price Styles*/
+.price2{ 
+    color: grey; 
+    font-size: 22px;
+}
+
+
+
+.Product_Container{
+    width: 1000px;
+    margin: 200px auto;
+    height:900px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 20px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top:4%;
+    margin-left:5%;
+}
+
+/*Search Style*/
+input[type="search"]{
+    background-color:lightgray;
+    width:265px;
+    height:45px;
+    border-radius:25px;
+    margin-top: 2%;
+    padding: 6px;
+
+}
+
+</style>
+
+<body> 
+
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+    </button>
+ 
+ 
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
+    </button> 
+ 
+    <!-- SIGN-UP/SIGN IN -->
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    </button>
+ 
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+    </button>
+ 
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+
+<h2 style="text-align: center; font-size: 35px; font-weight:bold;">Shoe Products</h2>
+<div class="Product_Container">
+    <!--10 Women & Men Shoes-->
+
+    <!--Product_1-->
+    <div class="card">
+        <img src="https://i.postimg.cc/T1hQ0nD8/women-shoes1.jpg" alt="Women_Shoes1" style="width:100%; height:207%;">
+        <h1>Women Soccer Shoes</h1>
+        <p class="price">$25.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_2-->
+    <div class="card2">
+        <h1 class="text" style="text-align: justify;">Women Casual Trainer Sneakers</h1>
+        <img src="" alt=""> <!--Enter image link here-->
+        <p class="price">$20</p>
+        <button class="card_button2">Add to Cart</button>
+    </div>
+
+    <!--Product_3-->
+
+    <!--Product_4-->
+    
+    <!--Product_5-->
+    
+    <!--Product_6-->
+    
+    <!--Product_7-->
+    
+    <!--Product_8-->
+    
+    <!--Product_9-->
+    
+    <!--Product_10-->
+</div>
+
+</body>
