@@ -1,13 +1,24 @@
 <!DOCTYPE html> 
 <html> 
     <head> 
-        <title>Product Page</title>
-        <!--Connection with css file-->
-        <link rel="stylesheet" href="Navigation.css">
+        <title>Products Page</title>
     </head>
 <style> 
 
-/*Note: Will be hopefully completed before class to shows*/
+/*Product container*/
+.Product_Container{
+    width: 1100px;
+    height:2200px;
+    margin: 200px auto;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 20px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top:4%;
+    margin-left:5%;
+}
 
 /*Navigation bar icons*/
 button{
@@ -29,10 +40,9 @@ body{
 /*Card main style*/
 .card{ 
     box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
-    width:200px;
+    width:220px;
     height:100px;
     margin: flex; 
-    border:black solid 2px;
     text-align: center; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -58,19 +68,20 @@ body{
     color:white;
 }
 
+
 /*Card main style*/
 .card2{ 
     box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
-    width:200px;
+    width:220px;
     height:100px;
     margin: flex; 
-    border:black solid 2px;
     text-align: center; 
-    font-family: arial;
-    margin-left:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:27%;
+    margin-top:-10%;
 }
 
-/*Card Button*/
+/*Card Button 2*/
 .card_button2{ 
     border: none;
     outline:0;
@@ -83,40 +94,275 @@ body{
     width: 100%; 
     font-size:medium;
     font-weight: bold;
-    text-align:center;
-    margin-left:120%;
-    margin-top:-19%;
+    margin-left:3%;
 }
 
-.text{ 
-    margin-left:120%;
-}
-
+/*Card Button 2*/
 .card_button2:hover{ 
     background-color: orange;
     color:white;
 }
 
-/*Product Price Styles*/
-.price2{ 
-    color: grey; 
-    font-size: 22px;
+/*Card main style 3*/
+.card3{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:50%;
+    margin-top:-9%;
+}
+
+/*Card Button 3*/
+.card_button3{ 
+    border: none;
+    outline:0;
+    padding: 12px; 
+    color: black; 
+    background-color:white;
+    border:2px solid orange;
+    text-align: center; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size:medium;
+    font-weight: bold;
+}
+
+/*Card Button 3*/
+.card_button3:hover{ 
+    background-color: orange;
+    color:white;
 }
 
 
-.Product_Container{
-    width: 1000px;
-    margin: 200px auto;
-    height:900px;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-color: white;
-    padding: 20px;
-    border-radius:8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top:4%;
-    margin-left:5%;
+/*Card main style 4*/
+.card4{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:76%;
+    margin-top:-8%;
 }
+
+/*Card Button 4*/
+.card_button4{ 
+    border: none;
+    outline:0;
+    padding: 12px; 
+    color: black; 
+    background-color:white;
+    border:2px solid orange;
+    text-align: center; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size:medium;
+    font-weight: bold;
+}
+
+/*Card Button 4*/
+.card_button4:hover{ 
+    background-color: orange;
+    color:white;
+}
+
+/*Card main style 5*/
+.card5{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:1%;
+    margin-top:34%;
+}
+
+/*Card main style 6*/
+.card6{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:27%;
+    margin-top:-9%;
+}
+
+
+/*Card main style 7*/
+.card7{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:50%;
+    margin-top:-9%;
+}
+
+/*Card main style 8*/
+.card8{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:76%;
+    margin-top:-9%;
+}
+
+/*Card main style 9*/
+.card9{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:1%;
+    margin-top:35%;
+}
+
+/*Card main style 10*/
+.card10{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:27%;
+    margin-top:-9%;
+}
+
+/*Card main style 11*/
+.card11{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:52%;
+    margin-top:-6%;
+}
+
+/*Card main style 12*/
+.card12{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:76%;
+    margin-top:-9%;
+}
+
+/*Card main style 13*/
+.card13{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:1%;
+    margin-top:28%;
+}
+
+/*Card main style 14*/
+.card14{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:27%;
+    margin-top:-9%;
+}
+
+/*Card main style 15*/
+.card15{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:50%;
+    margin-top:-9%;
+}
+/*Card main style 16*/
+.card16{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:50%;
+    margin-top:-9%;
+}
+
+/*Card main style 17*/
+.card17{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:76%;
+    margin-top:-9%;
+}
+
+/*Card main style 18*/
+.card18{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:1%;
+    margin-top:27%;
+}
+
+/*Card main style 19*/
+.card19{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:27%;
+    margin-top:-9%;
+}
+
+/*Card main style 20*/
+.card20{ 
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0, 0.2);
+    width:220px;
+    height:100px;
+    margin: flex; 
+    text-align: center; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:50%;
+    margin-top:-9%;
+}
+
+
 
 /*Search Style*/
 input[type="search"]{
@@ -174,27 +420,158 @@ input[type="search"]{
 
     <!--Product_2-->
     <div class="card2">
-        <h1 class="text" style="text-align: justify;">Women Casual Trainer Sneakers</h1>
-        <img src="" alt=""> <!--Enter image link here-->
-        <p class="price">$20</p>
-        <button class="card_button2">Add to Cart</button>
+        <img src="https://i.postimg.cc/G2YWVf2k/women-shoes2.jpg" alt="Women_Shoes2" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price2">$20.00</p>
+        <button class="card_button2">Add to Cart</button></p>
     </div>
 
     <!--Product_3-->
+    <div class="card3">
+        <img src="https://i.postimg.cc/Fzvnksx6/womens-shoes3.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$30.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
 
     <!--Product_4-->
-    
+    <div class="card4">
+        <img src="https://i.postimg.cc/524F0dW2/women-shoes4.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$30.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
     <!--Product_5-->
-    
+    <div class="card5">
+        <img src="https://i.postimg.cc/rpbdQD0D/women-shoes5.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$19.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
     <!--Product_6-->
-    
+    <div class="card6">
+        <img src="https://i.postimg.cc/xjLk3T0d/women-shoes6.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
     <!--Product_7-->
-    
+    <div class="card7">
+        <img src="https://i.postimg.cc/mr0D7KJM/women-shoes7.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
     <!--Product_8-->
+    <div class="card8">
+        <img src="https://i.postimg.cc/LXLsDNFW/women-shoes8.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
     
     <!--Product_9-->
-    
+    <div class="card9">
+        <img src="https://i.postimg.cc/vTyZNfQZ/womens-shoes9.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
     <!--Product_10-->
+    <div class="card10">
+        <img src="https://i.postimg.cc/wT6B5XfW/women-shoes10.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Women Casual Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Add navigation line to -->
+
+    <!--Product_11-->
+    <div class="card11">
+        <img src="https://i.postimg.cc/htYPqHSw/men-shoes1.jpg" alt="men_Shoes1" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_12-->
+    <div class="card12">
+        <img src="https://i.postimg.cc/d1PshrZj/men-shoes2.jpg" alt="men_shoes2" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_13-->
+    <div class="card13">
+        <img src="https://i.postimg.cc/wM99VzVt/men-shoes3.jpg" alt="men_shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_14-->
+    <div class="card14">
+        <img src="https://i.postimg.cc/J7Qrhyrj/men-shoes4.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_15-->
+    <div class="card15">
+        <img src="https://i.postimg.cc/ncRnv6Qz/men-shoes5.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_16-->
+    <div class="card16">
+        <img src="https://i.postimg.cc/3wp7QNf4/men-shoes6.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_17-->
+    <div class="card17">
+        <img src="https://i.postimg.cc/d1jYDXYJ/men-shoes7.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_18-->
+    <div class="card18">
+        <img src="https://i.postimg.cc/BbhfBKby/men-shoes8.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_19-->
+    <div class="card19">
+        <img src="https://i.postimg.cc/RVFBVXbz/men-shoes9.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
+    <!--Product_20-->
+    <div class="card20">
+        <img src="https://i.postimg.cc/9Fnj4Zvw/men-shoes10.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
+        <h1>Men Shoes</h1>
+        <p class="price">$23.00</p>
+        <button class="card_button">Add to Cart</button></p>
+    </div>
+
 </div>
 
 </body>
