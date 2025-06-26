@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    /*(all) navigation buttons style1*/
+    button {
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+        display: inline-block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-left: 45px;
+    }
+
+    /*(all) navigation buttons style*/
+    button:hover {
+        background-color: lightgray;
+        color: grey;
+        border-radius: 5%;
+    }
+
+    /* Fake image, just for this example */
+    .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /*Containers to store product details*/
+    /*Container for Profile(Image)  + Notification Settings */
+    .form-container {
+        display: flex;
+        text-align: center;
+        padding: 0 100px;
+        border-radius: 10px;
+    }
+
+    /*Notification Settings Box*/
+    .Product_details {
+        width: 620px;
+        height: 295px;
+        text-align: center;
+        border: black solid 7px;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: -22%;
+        margin-left: 24%;
+    }
+
+    .Product_details2 {
+        width: 620px;
+        height: 280px;
+        text-align: center;
+        border: black solid 7px;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: -22%;
+        margin-left: 24%;
+    }
+
+    .images {
+        width: 410px;
+        height: 100px;
+        border: black solid 2px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 4%;
+    }
+
+    .h {
+        color: red;
+        text-align: right;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /*row to store 3 columns inside*/
+    .row {
+        display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+
+    /*div container for payment method (one choice only!)*/
+    .container1 {
+        width: 320px;
+        height: 560px;
+        text-align: center;
+        border: black solid 7px;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 75%;
+        margin-top: -75%;
+    }
+
+    /*button for continue with payment of shopping*/
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid orange;
+        margin-left: 10%;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .button1:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .total {
+        width: 270px;
+        height: 90px;
+        border: black solid 7px;
+        border-radius: 10px;
+        text-align: center;
+        margin-left: 6%;
+    }
+
+    .paymenthead {
+        text-align: center;
+        margin-top: -22%;
+        font-size: medium;
+    }
+
+    .h4 {
+        display: flex;
+        font-size: medium;
+        margin-left: 80%;
+        margin-top: -7%;
+        border: black solid 4px;
+    }
+
+    .h3 {
+        display: flex;
+        font-size: 27px;
+        margin-left: 9%;
+        margin-top: -2%;
+        border: black solid 4px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoezExpress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+   <!--Background color for Page-->
+    <body style="background-color: #FBFaF4;">
+ 
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+    </button>
+ 
+ 
+    <!--SEARCH BAR-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
+    </button>
+   
+    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
+ 
+ 
+    <!-- SIGN-UP/SIGN IN -->
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    </button>
+ 
+    <!--CONTACT PAGE-->
+    <button type="contact us" >
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+    </button>
+ 
+    <!-- CART PAGE -->
+    <button type="Cart_page">
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+    </button>
+   
+     
+    <!--Line to seperate navigation bar-->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+    <br>
+
+    <main>
+        <div class="product-list">
+            <div class="product">
+                <a href="product/running_shoes"><img
+                        src="{{ url_for('static', filename='images/unisex_running_shoes.png') }}"
+                        alt="unisex running shoes"></a>
+                <h3>Unisex Running Shoes</h3>
+                <p>NZ$37.35 <span class="discount">NZ$134.68 - 72%</span></p>
+                <p>⭐ 4.8 | 18 Reviews | 87 sold</p>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/casual_sports_shoe.png') }}" alt="casual sports shoes">
+                <h3>Casual Sports Shoe</h3>
+                <p>NZ$17.13 <span class="discount">NZ$58.68 - 70%</span></p>
+                <p>⭐ 4.5 | 2 Reviews | 18 sold</p>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/high_quality_tennis_shoe.png') }}"
+                    alt="high quality tennis shoe">
+                <h3>High Quality Tennis Shoe</h3>
+                <p>NZ$24.19 <span class="discount">NZ$69.00 - 65%</span></p>
+                <p>⭐ 4.7 | 10 Reviews | 50 sold</p>
+            </div>
+        </div>
+
+        <div class="sale-banner">
+            <h2>April Sale</h2>
+            <p>Sale Ends: Apr 21, 11:59 NZST</p>
+            <div class="discount-codes">
+                <div class="code">
+                    <p>NZ$50 OFF</p>
+                    <p>Code: 879A5K</p>
+                </div>
+                <div class="code">
+                    <p>NZ$120 OFF</p>
+                    <p>Code: 879A5K</p>
+                </div>
+            </div>
+            <div class="top-deals">
+                <p>Top deals</p>
+                <p>NZ$1.71</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
