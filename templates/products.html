@@ -362,8 +362,6 @@ body{
     margin-top:-9%;
 }
 
-
-
 /*Search Style*/
 input[type="search"]{
     background-color:lightgray;
@@ -381,7 +379,7 @@ input[type="search"]{
 
     <!--HOME PAGE-->
     <button type="Home">
-        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" alt="Home" border="0" width="190" height="50"/>
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" onclick="window.location.href = '/'" alt="Home" border="0" width="190" height="50"/>
     </button>
  
  
@@ -391,19 +389,19 @@ input[type="search"]{
         <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
     </button> 
  
-    <!-- SIGN-UP/SIGN IN -->
+    <!-- SIGN-UP/SIGN IN --> 
     <button type="Sign-in,Sign-up">
-        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+        <img src="https://i.postimg.cc/x1DFFpBg/sign-up-sign-in.jpg" alt="buttonpng" border="0" width="80" height="50"/>
     </button>
- 
+
     <!--CONTACT PAGE-->
     <button type="contact us" >
-        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/contact_us'" width="80" height="70">
     </button>
- 
+
     <!-- CART PAGE -->
     <button type="Cart_page">
-        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/cart' ; " alt="buttonpng" border="0" width="80" height="70" />
     </button>
 
 <h2 style="text-align: center; font-size: 35px; font-weight:bold;">Shoe Products</h2>
@@ -411,7 +409,7 @@ input[type="search"]{
     <!--10 Women & Men Shoes-->
 
     <!--Product_1-->
-    <div class="card">
+    <div class="card" method="GET" action="/cart">
         <img src="https://i.postimg.cc/T1hQ0nD8/women-shoes1.jpg" alt="Women_Shoes1" style="width:100%; height:207%;">
         <h1>Women Soccer Shoes</h1>
         <p class="price">$25.00</p>
@@ -429,7 +427,7 @@ input[type="search"]{
     <!--Product_3-->
     <div class="card3">
         <img src="https://i.postimg.cc/Fzvnksx6/womens-shoes3.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
-        <h1>Women Casual Shoes</h1>
+        <h1>Women Sports Shoes</h1>
         <p class="price">$30.00</p>
         <button class="card_button">Add to Cart</button></p>
     </div>
@@ -559,7 +557,7 @@ input[type="search"]{
     <!--Product_19-->
     <div class="card19">
         <img src="https://i.postimg.cc/RVFBVXbz/men-shoes9.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
-        <h1>Men Shoes</h1>
+        <h1>Men Sport Shoes</h1>
         <p class="price">$23.00</p>
         <button class="card_button">Add to Cart</button></p>
     </div>
@@ -567,7 +565,7 @@ input[type="search"]{
     <!--Product_20-->
     <div class="card20">
         <img src="https://i.postimg.cc/9Fnj4Zvw/men-shoes10.jpg" alt="Women_Shoes3" style="width:100%; height:207%;">
-        <h1>Men Shoes</h1>
+        <h1>Men runnin Shoes</h1>
         <p class="price">$23.00</p>
         <button class="card_button">Add to Cart</button></p>
     </div>

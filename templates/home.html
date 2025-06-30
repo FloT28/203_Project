@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoezExpress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
 <style>
     /*(all) navigation buttons style1*/
     button {
@@ -146,14 +154,19 @@
         margin-top: -2%;
         border: black solid 4px;
     }
-</style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoezExpress</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-</head>
+    /*Search Style*/
+input[type="search"]{
+    background-color:lightgray;
+    width:265px;
+    height:45px;
+    border-radius:25px;
+    margin-top: 2%;
+    padding: 6px;
+
+}
+
+</style>
 
 <body>
    <!--Background color for Page-->
@@ -165,28 +178,30 @@
     </button>
  
  
-    <!--SEARCH BAR-->
+    <!--SEARCH BAR--><!--future implementation-->
     <input type="search" placeholder="Search">
     <button>
         <image src="https://i.postimg.cc/J4wVtw6K/search.png" width="50" height="50"></image>
     </button>
-   
-    <!--<img src="https://i.postimg.cc/c4pgTCrS/search-icon.png" alt="draft_search_box" width="250" height="65"/>-->
  
- 
-    <!-- SIGN-UP/SIGN IN -->
-    <button type="Sign-in,Sign-up">
-        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png" alt="buttonpng" border="0" width="120" height="50"/>
+    <!--Product / Cart Page-->
+    <button>
+        <image src="https://i.postimg.cc/4yXxpjjq/products-icon.png"  onclick="window.location.href = '/products';"  width="120" height="100"></image>
     </button>
- 
+
+     <!-- SIGN-UP/SIGN IN --> 
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/x1DFFpBg/sign-up-sign-in.jpg" onclick="window.location.href = '/sign_up'" alt="buttonpng" border="0" width="80" height="50"/>
+    </button>
+
     <!--CONTACT PAGE-->
     <button type="contact us" >
-        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/'" width="100" height="70">
+        <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/contact_us'" width="80" height="70">
     </button>
- 
+
     <!-- CART PAGE -->
     <button type="Cart_page">
-        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/Cart/' ; " alt="buttonpng" border="0" width="100" height="70" />
+        <img src="https://i.postimg.cc/Czxb6JbP/checkout-icon.png" onclick="window.location.href = '/cart' ; " alt="buttonpng" border="0" width="80" height="70" />
     </button>
    
      
