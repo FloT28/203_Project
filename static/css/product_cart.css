@@ -6,22 +6,27 @@
     margin:40px;
 }
 
-#shopping-cart table td{ 
-    background-color:white;
+#shopping-cart table{ 
+    width:100%;
+    background-color:#F0F0F0;
 }
 
-txt-heading{ 
+#shopping-cart table td{
+    background-color: #FFFFFF;
+}
+
+.txt-heading{ 
     color:orange;
     font-weight: bold;
-    border-bottom: 1px solid lightblue;
+    border-bottom: 2px solid lightblue;
     overflow: auto;
 }
 
 #btnEmpty{ 
     background-color:black;
-    border: 1px solid;
+    border: #d00000 1px solid;
     padding: 5px 10px;
-    color:lightsalmon;
+    color:#d00000;
     float:right;
     text-decoration: none;
     border-radius: 3px;
@@ -52,9 +57,9 @@ txt-heading{
 }
 
 .product-image{
-    height:155px;
-    width:250px;
-    background-color: white;
+    height:150px;
+    width:200px;
+    background-color: #FFF;
 }
 
 .clear-float{ 
@@ -77,14 +82,14 @@ txt-heading{
 
 .product-title{ 
     margin-bottom:20px;
-    font-weight: bold;
-    color:black;
+    /*font-weight: bold;*/
+    /*color:black;*/
 }
 
 .product-price{ 
     float:left;
-    color:black;
-    font-weight:italic;
+    /*color:black;
+    font-weight:italic;*/
 }
 
 .cart-action{ 
@@ -94,10 +99,10 @@ txt-heading{
 .product-quantity{ 
     padding: 5px 10px;
     border-radius: 3px;
-    border: white 1px solid;
+    border: #E0E0E0 1px solid;
 }
 
-.product-title-footer{ 
+.product-tile-footer{ 
     padding: 15px 15px 0px 15px;
     overflow: auto;
 }
@@ -106,7 +111,7 @@ txt-heading{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border:lightskyblue 1px solid;
+    border:black 1px solid;
     padding: 5px;
     vertical-align: middle;
     margin-right: 15px;
