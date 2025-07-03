@@ -41,6 +41,37 @@ input[type="search"]{
 </style>
 
 <body>
+
+	 <!--Background color for Page-->
+    <body style="background-color: #FBFaF4;">
+ 
+    <!--HOME PAGE-->
+    <button type="Home">
+        <img src="https://i.postimg.cc/YCxzshhT/Logo.png" onclick="window.location.href = '/'" alt="Home" border="0" width="190" height="50"/>
+    </button>
+ 
+ 
+    <!--SEARCH BAR--><!--future implementation-->
+    <input type="search" placeholder="Search">
+    <button>
+        <image src="https://i.postimg.cc/J4wVtw6K/search.png"  width="50" height="50"></image>
+    </button>
+ 
+     <!--Product Page-->
+    <button>
+        <image src="https://i.postimg.cc/4yXxpjjq/products-icon.png" onclick="window.location.href = '/products'" width="120" height="85"></image>
+    </button>
+
+     <!-- SIGN-UP/SIGN IN --> 
+    <button type="Sign-in,Sign-up">
+        <img src="https://i.postimg.cc/x1DFFpBg/sign-up-sign-in.jpg" onclick="window.location.href = '/sign_up'" alt="buttonpng" border="0" width="80" height="50"/>
+    </button>
+
+    <!--Line to seperate navigation bar-->
+    <hr width="100%" size="5" color="lightgray" noshade="">
+    <br>
+
+
 	<div>
 		{% with messages = get_flashed_messages() %}
 		  {% if messages %}
