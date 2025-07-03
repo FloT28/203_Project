@@ -9,7 +9,7 @@
 <style>
         /*(all) navigation buttons style1*/
 button{
-    border: none;
+    border: black solid 1px;
     cursor: pointer;
     appearance: none;
     background-color: inherit;
@@ -18,7 +18,6 @@ button{
     cursor:pointer;
     margin-left: 45px;
     }
-
 
 
 /*Search Bar*/
@@ -75,7 +74,6 @@ input[type="search"]{
 
 <body>
 
-        <body>
         <!--Background color of entire page-->
         <body style="background-color: #FBFaF4;">
  
@@ -93,14 +91,14 @@ input[type="search"]{
  
      <!--Product Page-->
     <button>
-        <image src="https://i.postimg.cc/4yXxpjjq/products-icon.png" width="120" height="100"></image>
+        <image src="https://i.postimg.cc/4yXxpjjq/products-icon.png" onclick="window.location.href = '/products'" width="120" height="85"></image>
     </button>
     
-    <!-- SIGN-UP/SIGN IN -->
+    <!-- SIGN-UP/SIGN IN --> 
     <button type="Sign-in,Sign-up">
-        <img src="https://i.postimg.cc/mZKz9w3V/Sign-in-Sign-up.png"  onclick="window.location.href = '/sign_up'" alt="buttonpng" border="0" width="120" height="50"/>
+        <img src="https://i.postimg.cc/x1DFFpBg/sign-up-sign-in.jpg" alt="buttonpng" border="0" width="80" height="50"/>
     </button>
- 
+
     <!--CONTACT PAGE-->
     <button type="contact us" >
         <img src="https://i.postimg.cc/t4P239Qv/contact-icon.png" onclick="window.location.href = '/contact_us'" width="100" height="70">
@@ -121,36 +119,35 @@ input[type="search"]{
  <!-- Wrapper for form -->
         <h1 text-align: center;>{% block title %} Sign-up {% endblock %}</h1>
 
-        <form action="{{ url_for('sign_up') }}" method="post">
+        <form action="{{ url_for('sign_up') }}" method="POST">
             <div>{{ msg }}</div>
 
-        <label for="username">Username</label>
-        <br>
-        <input type="text" name="username" placeholder="Enter Username..." value="{{request.form['username','']}}"  maxlength="10" required></input>
-        <br>
-        <br>
+            <label for="username">Username</label>
+            <br>
+            <br>
+            <input type="text" name="username" placeholder="Enter Username..." value="{{request.form.get['username','']}}"  maxlength="10" required></input>
+            <br>
+            <br>
 
-        <label for="email" >Email</label>
-        <br>
+                <!--Add error message if not entered at least 8 characters*-->
+            <label for="password" >Password</label>
+            <br>
 
-        <input type="text" name="email" placeholder="Enter Email..." value="{{request.form['email','']}}" required></input>
-        <br>
-        <br>
+            <input type="password" name="password" placeholder="Enter Password..." value="{{request.form.get['password','']}}" maxlength="16"  required></input>
+            <br>
+            <br>
 
-        <!--Add error message if not entered at least 8 characters*-->
-        <label for="password" >Password</label>
-        <br>
-        <br>
+            <label for="email" >Email</label>
+            <br>
 
-        <input type="password" name="password" placeholder="Enter Password..." value="{{request.form['password','']}}" maxlength="16"  required></input>
-        <br>
-        <br>
+            <input type="text" name="email" placeholder="Enter Email..." value="{{request.form.get['email','']}}" required></input>
+            <br>
+            <br>
 
-
-        <button type="submit" value="Sign-up" class="button2">Submit</button>
+            <button type="submit" value="Sign-up" class="button2">Submit</button>
         </form>
 
-        <p class="bottom">Already have an account? <a href="{{ url_for('sign_in') }}">Login here</a></p>
+        <p class="bottom">Already have an account? <a href="{{ url_for('sign_in') }}">Sign-in here</a></p>
     </div>
 
 </body>
